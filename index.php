@@ -1,8 +1,14 @@
 <?php
 
-echo "Adnan je mnogo pametan";
-echo "<br> Jedan dva ";
+require 'vendor/autoload.php';
 
+Flight::route('/',function(){
+
+  echo "Hello World!";
+
+})
+
+Flight::start();
 
 
  ?>
