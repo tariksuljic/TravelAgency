@@ -2,6 +2,9 @@
 
 class travelAgencyDao{
 
+
+  private $conn;
+
 //constructor for dao class
 
   public function __construct(){
