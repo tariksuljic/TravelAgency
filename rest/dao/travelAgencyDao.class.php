@@ -32,9 +32,11 @@ class travelAgencyDao{
   }
 
   //Method used to add user to the database
-  public function add($description,$created){
+  public function add($users){
     $stmt=$this->conn->prepare("INSERT INTO users (description,created) VALUES(:description,:created)");
-    $stmt->execute(['description'=>$description,'created'=>$created]);
+    $stmt->execute($users);
+    return $users;
+
   }
 
   //Method to delete record from the database
