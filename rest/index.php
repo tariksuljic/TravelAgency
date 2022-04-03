@@ -35,11 +35,7 @@ Flight::route('GET /users/@id',function($id){
 */
 Flight::route('POST /users',function(){
 
-
-  $request = Flight::request();
-  $data=$request->data->getData();
-  $users=Flight::travelAgency()->add($data);
-  Flight::json($users);
+  Flight::json(Flight::travelAgency()->add(Flight::request()->data->getData()));
 
 });
 
@@ -49,6 +45,15 @@ Flight::route('POST /users',function(){
 *update users
 
 */
+Flight::route('PUT /users/@id',function($id){
+
+  $data=Flight::request()->data->getData();
+  $data['id']=$id;
+  Flight::json(Flight::travelAgency()->update($data));
+
+});
+
+
 /**
 * delete user
 

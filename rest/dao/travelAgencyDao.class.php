@@ -34,7 +34,9 @@ class travelAgencyDao{
   //Method used to add user to the database
   public function add($users){
     $stmt=$this->conn->prepare("INSERT INTO users (description,created) VALUES(:description,:created)");
+
     $stmt->execute($users);
+    $users['id']=$this->conn->lastInsertId();
     return $users;
 
   }
@@ -50,13 +52,11 @@ class travelAgencyDao{
 
   //Method to update user record
 
-  public function update($id,$description,$created){
+  public function update($users){
 
     $stmt=$this->conn->prepare("UPDATE users SET description=:description,created=:created WHERE id=:id");
-    $stmt->bindParam(':id',$id);
-    $stmt->bindParam(':description',$description);
-    $stmt->bindParam(':created',$created);
-    $stmt->execute();
+    $stmt->execute($users);
+    return $users;
 
   }
 
