@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>TravelAgency</title>
+  <link rel="stylesheet" href="css\bootstrap.min.css">
+
+  <style>
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+
+
+
+    <div class="container px-4 py-5" id="hanging-icons">
+
+      <a href="#" class="btn btn-primary addNewUser" onclick="showAddNewUserModal()">
+        ADD USER
+      </a>
+
+
+      <div id="users-list">
+
+
+      </div>
+    </div>
+
+
+
+
+  </main>
+
+</body>
+
+<script src="js\bootstrap.bundle.min.js"></script>
+<script src="js\jquery-3.6.0.min.js"></script>
+<script src="js\jquery.validate.min.js"></script>
+<script src="js\usersService.js" charset="utf-8"></script>
+
+
+
+
+
+
+<!- MODALS -->
+
+  <div class="modal" tabindex="-1" id="editModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Edit user</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="f1">
+
+            <input type="hidden" id="id">
+
+          </div>
+          <div class="f1">
+            <label for="">Description:</label><br>
+            <input type="text" id="description">
+          </div>
+          <div class="f1">
+            <input type="hidden" id="created">
+          </div>
+
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="usersService.update()">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" tabindex="-1" id="addModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form id="addUserForm">
+          <div class="modal-header">
+            <h5 class="modal-title">Add user</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <div class="mb-3">
+              <label>Description</label>
+              <input name="description" type="text" class="form-control required">
+
+            </div>
+            <div class="mb-3">
+              <label>Created</label>
+              <input name="created" type="date" class="form-control required">
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <!- Java Script-->
+
+    <script>
+
+
+
+
+      usersService.init();
+
+/*
+      function showEditModal(id) {
+        $.get('rest/users/' + id, function(data) {
+
+          $("#id").val(data.id);
+          $("#description").val(data.description);
+          $("#created").val(data.created);
+          $("#editModal").modal("show");
+
+        });
+      }
+
+      function showAddNewUserModal() {
+        $("#addModal").modal("show");
+      }
+
+      */
+
+
+    </script>
+
+
+
+
+</html>
