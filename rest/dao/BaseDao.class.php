@@ -1,18 +1,19 @@
 <?php
 
-class travelAgencyDao{
+class BaseDao{
 
 
   private $conn;
+  private $table_name;
 
 //constructor for dao class
 
-  public function __construct(){
-
+  public function __construct($table_name){
+    $this->table_name=$table_name;
     $servername="127.0.0.1:3308";
-    $username="travelAgency";
-    $password="travelAgency123";
-    $schema="travelagency";
+    $username="newUser";
+    $password="tarik1234";
+    $schema="travel_agency";
 
     $this->conn=new PDO("mysql:host=$servername;dbname=$schema",$username,$password);
     $this->conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
@@ -26,7 +27,7 @@ class travelAgencyDao{
 
     public function get_all(){
 
-    $stmt=$this->conn->prepare("SELECT * FROM users");
+    $stmt=$this->conn->prepare("SELECT * FROM ".$this->table_name);
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
