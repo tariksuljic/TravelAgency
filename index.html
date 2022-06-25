@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>TravelAgency</title>
   <link rel="stylesheet" href="css\bootstrap.min.css">
+  <link rel="stylesheet" href="css\bootstrap.bundle.min.css">
 
   <style>
     .error {
@@ -16,44 +17,115 @@
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Travel Guide</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Travel Guide</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
   </header>
 
   <main>
+
+
+
+    <div class="h-20rem p-5 d-flex flex-column text-white rounded shadow bg-primary has-bg-img" style="background-image: url(https://www.smartertravel.com/wp-content/uploads/2008/06/tropical-beach-and-palm-trees-1200x627.jpg);">
+
+
+      <div class="hero-search d-flex align-items-start justify-content-center">
+
+        <div class="d-flex align-items-center justify-content-center w-lg-50" id="search-bar">
+            <form action="https://www.jungletribe.ba/pretraga" method="GET" class="d-none d-lg-block shadow">
+                <div class="input-group d-none d-lg-flex">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text border-0 bg-white"><i class="fas fa-map-marker-alt"></i></span>
+                    </div>
+
+                    <input type="text" id="s" name="s" class="form-control border-0 form-control-lg" placeholder="Gdje želite putovati?" autocomplete="off">                    <div class="input-group-append input-group-prepend">
+                        <span class="input-group-text border-0 bg-white"><i class="fas fa-calendar-day"></i></span>
+                    </div>
+                    <input type="text" id="period" name="period" class="form-control border-0 form-control-lg" placeholder="Kada želite putovati?" data-toggle="daterangepicker">                    <div class="input-group-append input-group-prepend">
+                        <span class="input-group-text border-0 bg-white"><i class="fas fa-coins"></i></span>
+                    </div>
+                    <input type="text" id="priceTo" name="priceTo" class="form-control border-0 form-control-lg w-5 px-3" data-toggle="price" min="1" data-decimals="2" placeholder="Do koliko novca?" style="display: none;"><input type="text" id="priceTo-77e39bed" placeholder="Do koliko novca?" class="form-control  border-0 form-control-lg w-5 px-3">                    <div class="input-group-append border-0">
+                        <button class="btn btn-lg btn-primary border-0 text-center px-3"><i class="fas fa-search mr-2"></i><span>Traži</span></button>
+                    </div>
+                </div>
+            </form>
+
+            <form action="https://www.jungletribe.ba/pretraga" method="GET" class="mt-n5 d-lg-none shadow">
+
+                <div class="input-group mb-2 d-lg-none">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text border-0 bg-white"><i class="fas fa-map-marker-alt"></i></span>
+                    </div>
+
+                    <input type="text" id="s" name="s" class="form-control border-0 form-control-lg form-control border-0 form-control-lg" placeholder="Gdje želite putovati?" autocomplete="off">                </div>
+                <div class="input-group mb-2 d-lg-none">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text border-0 bg-white"><i class="fas fa-calendar-day"></i></span>
+                    </div>
+                    <input type="text" id="period" name="period" class="form-control border-0 form-control-lg form-control border-0 form-control-lg" placeholder="Kada želite putovati?" data-toggle="daterangepicker">                </div>
+                <div class="input-group mb-2 d-lg-none">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text border-0 bg-white"><i class="fas fa-coins"></i></span>
+                    </div>
+                    <input type="text" id="priceTo" name="priceTo" class="form-control border-0 form-control-lg w-5 px-3 form-control border-0 form-control-lg w-5 px-3" data-toggle="price" min="1" data-decimals="2" placeholder="Do koliko novca?" style="display: none;"><input type="text" id="priceTo-6512b3fd" placeholder="Do koliko novca?" class="form-control  border-0 form-control-lg w-5 px-3 form-control border-0 form-control-lg w-5 px-3">                </div>
+                <div class="border-0 d-lg-none">
+                    <button class="btn btn-lg btn-block btn-primary border-0 text-center px-3"><i class="fas fa-search mr-2"></i><span>Traži</span></button>
+                </div>
+                <a href="https://www.jungletribe.ba/kalendar-putovanja" class="btn btn-lg btn-block my-3 btn-secondary"><i class="fas fa-calendar-alt mr-2"></i> Kalendar putovanja</a>
+
+
+
+            </form>
+        </div>
+
+
+
+
+
+    </div>
+
+
+      <img class="bg-img" src="/assets/img/util/gradient-01-w.svg" alt="bg">
+    </div>
+
+
+
+
+
     <div class="row" id="toursList">
       <div class="spinner-border" role="status">
         <span class="sr-only">Loading...</span>
@@ -146,31 +218,25 @@
   <!- Java Script-->
 
     <script>
-
-
-
-
       toursService.list();
 
-/*
-      function showEditModal(id) {
-        $.get('rest/users/' + id, function(data) {
+      /*
+            function showEditModal(id) {
+              $.get('rest/users/' + id, function(data) {
 
-          $("#id").val(data.id);
-          $("#description").val(data.description);
-          $("#created").val(data.created);
-          $("#editModal").modal("show");
+                $("#id").val(data.id);
+                $("#description").val(data.description);
+                $("#created").val(data.created);
+                $("#editModal").modal("show");
 
-        });
-      }
+              });
+            }
 
-      function showAddNewUserModal() {
-        $("#addModal").modal("show");
-      }
+            function showAddNewUserModal() {
+              $("#addModal").modal("show");
+            }
 
-      */
-
-
+            */
     </script>
 
 
