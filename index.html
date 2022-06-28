@@ -60,34 +60,29 @@
 
 
 
-    <div class="h-40rem p-5 d-flex flex-column text-white align-items-center justify-content-center rounded shadow bg-primary has-bg-img" style="background-image: url(https://www.smartertravel.com/wp-content/uploads/2008/06/tropical-beach-and-palm-trees-1200x627.jpg);">
+    <div class="h-40rem p-5 d-flex flex-column text-white align-items-center justify-content-center rounded shadow bg-primary has-bg-img"
+      style="background-image: url(https://www.smartertravel.com/wp-content/uploads/2008/06/tropical-beach-and-palm-trees-1200x627.jpg);">
 
 
 
-        <h1 class="fw-bold display-1">Travel Guide</h1>
-        <div class="d-flex" id="search-bar">
-            <form action="https://www.jungletribe.ba/pretraga" method="GET" class="d-none d-lg-block shadow">
-                <div class="input-group d-none d-lg-flex">
+      <h1 class="fw-bold display-1">Travel Guide</h1>
+      <div class="d-flex" id="search-bar">
+        <form action="https://www.jungletribe.ba/pretraga" method="GET" class="d-none d-lg-block shadow">
+          <div class="input-group d-none d-lg-flex">
 
+            <input type="text" id="s" name="s" class="form-control border-0 form-control-lg" placeholder="Gdje želite putovati?" autocomplete="off">
+            <span class="input-group-text border-0 bg-white"><i class="fas fa-calendar-day"></i></span>
 
-                    <input type="text" id="s" name="s" class="form-control border-0 form-control-lg" placeholder="Gdje želite putovati?" autocomplete="off">
-                        <span class="input-group-text border-0 bg-white"><i class="fas fa-calendar-day"></i></span>
+            <input type="text" id="period" name="period" class="form-control border-0 form-control-lg" placeholder="Kada želite putovati?" data-toggle="daterangepicker">
+            <span class="input-group-text border-0 bg-white"><i class="fas fa-coins"></i></span>
 
-                    <input type="text" id="period" name="period" class="form-control border-0 form-control-lg" placeholder="Kada želite putovati?" data-toggle="daterangepicker">
-                        <span class="input-group-text border-0 bg-white"><i class="fas fa-coins"></i></span>
+            <input type="text" id="priceTo" name="priceTo" class="form-control border-0 form-control-lg w-5 px-3" data-toggle="price" min="1" data-decimals="2" placeholder="Do koliko novca?" style="display: none;"><input type="text"
+              id="priceTo-77e39bed" placeholder="Do koliko novca?" class="form-control  border-0 form-control-lg w-5 px-3">
+            <button class="btn btn-lg btn-primary border-0 text-center px-3"><i class="fas fa-search mr-2"></i><span>Traži</span></button>
 
-                    <input type="text" id="priceTo" name="priceTo" class="form-control border-0 form-control-lg w-5 px-3" data-toggle="price" min="1" data-decimals="2" placeholder="Do koliko novca?" style="display: none;"><input type="text" id="priceTo-77e39bed" placeholder="Do koliko novca?" class="form-control  border-0 form-control-lg w-5 px-3">
-                        <button class="btn btn-lg btn-primary border-0 text-center px-3"><i class="fas fa-search mr-2"></i><span>Traži</span></button>
-
-                </div>
-            </form>
-
-
-
-    </div>
-
-
-
+          </div>
+        </form>
+      </div>
       <img class="bg-img" src="/assets/img/util/gradient-01-w.svg" alt="bg">
     </div>
 
@@ -95,7 +90,7 @@
 
 
 
-    <div class="row" id="toursList">
+    <div class="column p-5" id="toursList">
       <div class="spinner-border" role="status">
         <span class="sr-only">Loading...</span>
       </div>
