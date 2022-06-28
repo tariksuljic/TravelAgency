@@ -10,9 +10,9 @@ class BaseDao{
 
   public function __construct($table_name){
     $this->table_name=$table_name;
-    $servername="127.0.0.1:3308";
-    $username="newUser";
-    $password="tarik1234";
+    $servername="localhost";
+    $username="root";
+    $password="password";
     $schema="travel_agency";
 
     $this->conn=new PDO("mysql:host=$servername;dbname=$schema",$username,$password);
@@ -69,9 +69,19 @@ class BaseDao{
     $stmt->execute();
     $result=$stmt->fetchAll(PDO::FETCH_ASSOC);
     return @reset($result);
-
-
   }
+
+  protected function query($query, $params){
+    $stmt = $this->conn->prepare($query);
+    $stmt->execute($params);
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+  }
+
+  //query unique
+  protected function query_unique($query, $params){
+   $results = $this->query($query, $params);
+   return reset($results);
+ }
 
 
 }

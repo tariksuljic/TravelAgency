@@ -16,7 +16,7 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Travel Guide</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,53 +64,25 @@
 
 
 
-
+        <h1 class="fw-bold display-1">Travel Guide</h1>
         <div class="d-flex" id="search-bar">
             <form action="https://www.jungletribe.ba/pretraga" method="GET" class="d-none d-lg-block shadow">
                 <div class="input-group d-none d-lg-flex">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text border-0 bg-white"><i class="fas fa-map-marker-alt"></i></span>
-                    </div>
 
-                    <input type="text" id="s" name="s" class="form-control border-0 form-control-lg" placeholder="Gdje želite putovati?" autocomplete="off">                    <div class="input-group-append input-group-prepend">
+
+                    <input type="text" id="s" name="s" class="form-control border-0 form-control-lg" placeholder="Gdje želite putovati?" autocomplete="off">
                         <span class="input-group-text border-0 bg-white"><i class="fas fa-calendar-day"></i></span>
-                    </div>
-                    <input type="text" id="period" name="period" class="form-control border-0 form-control-lg" placeholder="Kada želite putovati?" data-toggle="daterangepicker">                    <div class="input-group-append input-group-prepend">
+
+                    <input type="text" id="period" name="period" class="form-control border-0 form-control-lg" placeholder="Kada želite putovati?" data-toggle="daterangepicker">
                         <span class="input-group-text border-0 bg-white"><i class="fas fa-coins"></i></span>
-                    </div>
-                    <input type="text" id="priceTo" name="priceTo" class="form-control border-0 form-control-lg w-5 px-3" data-toggle="price" min="1" data-decimals="2" placeholder="Do koliko novca?" style="display: none;"><input type="text" id="priceTo-77e39bed" placeholder="Do koliko novca?" class="form-control  border-0 form-control-lg w-5 px-3">                    <div class="input-group-append border-0">
+
+                    <input type="text" id="priceTo" name="priceTo" class="form-control border-0 form-control-lg w-5 px-3" data-toggle="price" min="1" data-decimals="2" placeholder="Do koliko novca?" style="display: none;"><input type="text" id="priceTo-77e39bed" placeholder="Do koliko novca?" class="form-control  border-0 form-control-lg w-5 px-3">
                         <button class="btn btn-lg btn-primary border-0 text-center px-3"><i class="fas fa-search mr-2"></i><span>Traži</span></button>
-                    </div>
+
                 </div>
             </form>
 
-            <form action="https://www.jungletribe.ba/pretraga" method="GET" class="mt-n5 d-lg-none shadow">
 
-                <div class="input-group mb-2 d-lg-none">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text border-0 bg-white"><i class="fas fa-map-marker-alt"></i></span>
-                    </div>
-
-                    <input type="text" id="s" name="s" class="form-control border-0 form-control-lg form-control border-0 form-control-lg" placeholder="Gdje želite putovati?" autocomplete="off">                </div>
-                <div class="input-group mb-2 d-lg-none">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text border-0 bg-white"><i class="fas fa-calendar-day"></i></span>
-                    </div>
-                    <input type="text" id="period" name="period" class="form-control border-0 form-control-lg form-control border-0 form-control-lg" placeholder="Kada želite putovati?" data-toggle="daterangepicker">                </div>
-                <div class="input-group mb-2 d-lg-none">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text border-0 bg-white"><i class="fas fa-coins"></i></span>
-                    </div>
-                    <input type="text" id="priceTo" name="priceTo" class="form-control border-0 form-control-lg w-5 px-3 form-control border-0 form-control-lg w-5 px-3" data-toggle="price" min="1" data-decimals="2" placeholder="Do koliko novca?" style="display: none;"><input type="text" id="priceTo-6512b3fd" placeholder="Do koliko novca?" class="form-control  border-0 form-control-lg w-5 px-3 form-control border-0 form-control-lg w-5 px-3">                </div>
-                <div class="border-0 d-lg-none">
-                    <button class="btn btn-lg btn-block btn-primary border-0 text-center px-3"><i class="fas fa-search mr-2"></i><span>Traži</span></button>
-                </div>
-                <a href="https://www.jungletribe.ba/kalendar-putovanja" class="btn btn-lg btn-block my-3 btn-secondary"><i class="fas fa-calendar-alt mr-2"></i> Kalendar putovanja</a>
-
-
-
-            </form>
-        
 
     </div>
 
