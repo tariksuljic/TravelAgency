@@ -20,14 +20,7 @@ Flight::route('POST /login',function(){
       }else {
         Flight::json(["message"=>"User doesn't exist"],404);
       }
-      /*$payload = [
-         'iss' => 'http://example.org',
-         'aud' => 'http://example.com',
-         'iat' => 1356999524,
-         'nbf' => 1357000000
-      ];*/
-
-      //$decoded = JWT::decode($jwt, new Key($key, 'HS256'));
+      
 
 
 
