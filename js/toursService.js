@@ -19,8 +19,13 @@ var toursService = {
   },
 
   list: function() {
-    $.get("rest/tours", function(data) {
-
+    $.get({
+    url: "rest/tours",
+    type: "GET",
+    beforeSend: function(xhr){
+      xhr.setRequestHeader('Authorization', localStorage.getItem('token'));
+    },
+    success: function(data) {
       $("#toursList").html("");
 
       var html = "";
@@ -28,7 +33,6 @@ var toursService = {
       for (i = 0; i < data.length; i++) {
 
         html += `
-
     <div style="margin-top: 50px; display: inline-block;">
       <div class="card" style="width: 25rem;">
          <img src="https://i.natgeofe.com/n/45610619-0806-45f7-94c2-9f366df60aac/old-town-bascarsija-sarajevo.jpg">
@@ -44,12 +48,14 @@ var toursService = {
       }
 
       $("#toursList").html(html);
+    },
+    error: function(XMLHttpRequest, textStatus, errorThrown) {
+      toastr.error(XMLHttpRequest.responseJSON.message);
+      UserService.logout();
+    }
+ });
+},
 
-      console.log(data);
-
-    });
-
-  },
 
 
   add: function(user) {
